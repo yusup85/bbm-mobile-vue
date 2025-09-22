@@ -34,7 +34,53 @@
           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span class="text-xs font-medium">Riwayat</span>
+      <span class="text-xs font-medium">BBM</span>
+    </router-link>
+    <router-link to="/transportation" class="nav-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10h10m-3 0h3V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v10z"
+        />
+      </svg>
+      <span class="text-xs font-medium">Transportasi</span>
+    </router-link>
+    <router-link to="/booking" class="nav-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 14v6a2 2 0 002 2h4a2 2 0 002-2v-6a2 2 0 00-2-2h-4a2 2 0 00-2 2z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20.5 14.5A5.5 5.5 0 0015 9h-4a5.5 5.5 0 00-5.5 5.5v.5h16v-.5z"
+        />
+      </svg>
+      <span class="text-xs font-medium">Akomodasi</span>
     </router-link>
     <button @click="handleLogout" class="nav-btn">
       <svg

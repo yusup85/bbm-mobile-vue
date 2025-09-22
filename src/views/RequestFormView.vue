@@ -252,7 +252,17 @@ const submitRequest = async () => {
   isSubmitting.value = true
   submitError.value = null
   try {
-    await api.post('/api/permintaan-bbm', form)
+    const response = await api.post('/api/permintaan-bbm', form)
+    const permintaanId = response.data.data.id
+
+    // Send WhatsApp notification after successful submission
+    try {
+      await api.post(`/api/permintaan-bbm/${permintaanId}/send-whatsapp`)
+    } catch (notificationError) {
+      console.warn('WhatsApp notification failed:', notificationError)
+      // Don't block the success flow if notification fails
+    }
+
     alert('Permintaan berhasil diajukan!')
     router.push({ name: 'dashboard' })
   } catch (error) {

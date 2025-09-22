@@ -6,6 +6,12 @@ import HistoryView from '../views/HistoryView.vue'
 import ApprovalsView from '../views/ApprovalsView.vue'
 import DetailView from '../views/DetailView.vue'
 import RequestFormView from '../views/RequestFormView.vue'
+import TransportationView from '../views/TransportationView.vue'
+import CreateTransportationView from '../views/CreateTransportationView.vue'
+import TransportationDetailView from '../views/TransportationDetailView.vue'
+import BookingView from '../views/BookingView.vue'
+import CreateBookingView from '../views/CreateBookingView.vue'
+import BookingDetailView from '../views/BookingDetailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,6 +49,42 @@ const router = createRouter({
       path: '/request/:id',
       name: 'request-detail',
       component: DetailView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/transportation',
+      name: 'transportation',
+      component: TransportationView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/transportation/create',
+      name: 'transportation-create',
+      component: CreateTransportationView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/transportation/:id',
+      name: 'transportation-detail',
+      component: TransportationDetailView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/booking',
+      name: 'booking',
+      component: BookingView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/booking/create',
+      name: 'booking-create',
+      component: CreateBookingView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/booking/:id',
+      name: 'booking-detail',
+      component: BookingDetailView,
       meta: { requiresAuth: true },
     },
   ],
