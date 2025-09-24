@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Header -->
-    <header class="p-4 flex items-center gap-4 bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-10">
+    <header class="p-4 flex items-center gap-4 bg-white border-b sticky top-0 z-10">
       <button @click="$router.back()" class="mr-4">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -14,7 +14,7 @@
       <form @submit.prevent="submitForm" class="space-y-6">
 
         <!-- Layanan -->
-        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+        <div class="bg-white p-4 rounded-lg shadow">
           <h2 class="text-lg font-semibold mb-4">Layanan</h2>
           <div class="space-y-3">
             <label class="flex items-center">
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Form Layanan -->
-        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+        <div class="bg-white p-4 rounded-lg shadow">
           <h2 class="text-lg font-semibold mb-4">Form Layanan</h2>
 
           <!-- Info Notifikasi WhatsApp -->
@@ -78,7 +78,7 @@
               type="tel"
               id="nomor_telp"
               v-model="form.nomor_telp"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
               placeholder="Contoh: 08123456789"
               required
             >
@@ -95,7 +95,7 @@
               v-model="form.jumlah_penumpang"
               min="1"
               max="20"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
               required
             >
           </div>
@@ -112,7 +112,7 @@
                 type="text"
                 id="pickup_location"
                 v-model="form.pickup_location"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                 placeholder="Contoh: Hotel ABC, Jl. Sudirman No. 123"
                 :required="showPickupFields"
               >
@@ -126,7 +126,7 @@
                 type="text"
                 id="lokasi_tujuan_pickup"
                 v-model="form.lokasi_tujuan_pickup"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                 placeholder="Contoh: Bandara Soekarno Hatta"
                 :required="showPickupFields"
               >
@@ -141,7 +141,7 @@
                   type="date"
                   id="pickup_date"
                   v-model="form.pickup_date"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                   :required="showPickupFields"
                 >
               </div>
@@ -153,7 +153,7 @@
                   type="time"
                   id="pickup_time"
                   v-model="form.pickup_time"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                   :required="showPickupFields"
                 >
               </div>
@@ -172,7 +172,7 @@
                 type="text"
                 id="dropoff_location"
                 v-model="form.dropoff_location"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                 placeholder="Contoh: Bandara Soekarno Hatta"
                 :required="showDropoffFields"
               >
@@ -186,7 +186,7 @@
                 type="text"
                 id="lokasi_tujuan_dropoff"
                 v-model="form.lokasi_tujuan_dropoff"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                 placeholder="Contoh: Hotel ABC, Jl. Sudirman No. 123"
                 :required="showDropoffFields"
               >
@@ -201,7 +201,7 @@
                   type="date"
                   id="dropoff_date"
                   v-model="form.dropoff_date"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                   :required="showDropoffFields"
                 >
               </div>
@@ -213,7 +213,7 @@
                   type="time"
                   id="dropoff_time"
                   v-model="form.dropoff_time"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600"
                   :required="showDropoffFields"
                 >
               </div>

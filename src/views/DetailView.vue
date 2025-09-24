@@ -1,10 +1,8 @@
 <template>
   <div>
     <!-- Header -->
-    <header
-      class="p-4 flex items-center gap-4 bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-10"
-    >
-      <button @click="goBack" class="text-gray-700 dark:text-gray-200">
+    <header class="p-4 flex items-center gap-4 bg-white border-b border-gray-700 sticky top-0 z-10">
+      <button @click="goBack" class="text-gray-700">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -16,7 +14,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-      <h1 class="text-xl font-bold text-gray-900 dark:text-white">Detail Permintaan</h1>
+      <h1 class="text-xl font-bold text-gray-900">Detail Permintaan</h1>
     </header>
 
     <!-- Konten Detail -->
@@ -28,7 +26,7 @@
       </div>
       <div v-else-if="request" class="space-y-6">
         <!-- Bagian Aksi yang Tersedia -->
-        <section v-if="availableAction" class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+        <section v-if="availableAction" class="bg-white p-4 rounded-lg shadow">
           <h2 class="text-lg font-semibold mb-3">Aksi yang Tersedia</h2>
           <button
             @click="openActionModal(availableAction.type)"
@@ -40,54 +38,51 @@
         </section>
 
         <!-- Info Utama & Kendaraan -->
-        <section class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-          <h2 class="text-lg font-semibold mb-3 border-b pb-2 dark:border-gray-700">
+        <section class="bg-white p-4 rounded-lg shadow">
+          <h2 class="text-lg font-semibold mb-3 border-b pb-2 border-gray-700">
             Informasi Permintaan
           </h2>
           <div class="space-y-2 text-sm">
             <div class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">No. Form</span
+              <span class="text-gray-500">No. Form</span
               ><span class="font-medium text-right">{{ request.no_form }}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">Tanggal</span
+              <span class="text-gray-500">Tanggal</span
               ><span class="font-medium">{{ formattedDate }}</span>
             </div>
             <div class="flex justify-between items-center">
-              <span class="text-gray-500 dark:text-gray-400">Status</span
+              <span class="text-gray-500">Status</span
               ><span class="text-xs font-semibold px-2 py-1 rounded-full" :class="statusColor">{{
                 request.status
               }}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">Jenis Kendaraan</span
+              <span class="text-gray-500">Jenis Kendaraan</span
               ><span class="font-medium text-right">{{ jenisKendaraanNama }}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">No. Polisi</span
+              <span class="text-gray-500">No. Polisi</span
               ><span class="font-medium">{{ request.no_polisi }}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">Jenis BBM</span
+              <span class="text-gray-500">Jenis BBM</span
               ><span class="font-medium">{{ bbmNama }}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">Volume Diajukan</span
+              <span class="text-gray-500">Volume Diajukan</span
               ><span class="font-medium">{{ request.volume }} Liter</span>
             </div>
             <div v-if="request.volume_disetujui" class="flex justify-between">
-              <span class="text-gray-500 dark:text-gray-400">Volume Disetujui</span
+              <span class="text-gray-500">Volume Disetujui</span
               ><span class="font-medium text-green-600">{{ request.volume_disetujui }} Liter</span>
             </div>
           </div>
         </section>
 
         <!-- Bagian Foto Bukti Pengeluaran -->
-        <section
-          v-if="request.evidence_photo_path"
-          class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow"
-        >
-          <h2 class="text-lg font-semibold mb-3 border-b pb-2 dark:border-gray-700">
+        <section v-if="request.evidence_photo_path" class="bg-white p-4 rounded-lg shadow">
+          <h2 class="text-lg font-semibold mb-3 border-b pb-2 border-gray-700">
             Foto Bukti Pengeluaran
           </h2>
           <img
@@ -99,10 +94,8 @@
         </section>
 
         <!-- Alur Persetujuan -->
-        <section class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-          <h2 class="text-lg font-semibold mb-3 border-b pb-2 dark:border-gray-700">
-            Alur Persetujuan
-          </h2>
+        <section class="bg-white p-4 rounded-lg shadow">
+          <h2 class="text-lg font-semibold mb-3 border-b pb-2 border-gray-700">Alur Persetujuan</h2>
           <div class="grid grid-cols-2 gap-4">
             <ApprovalSignature
               title="Pemohon"
@@ -271,13 +264,13 @@ const statusColor = computed(() => {
   if (!request.value) return ''
   const status = request.value.status.toLowerCase()
   const colors = {
-    diajukan: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
-    disetujui_atasan: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+    diajukan: 'bg-blue-100 text-blue-800',
+    disetujui_atasan: 'bg-green-100 text-green-800',
     // [FIX] Menambahkan status 'dikeluarkan_operator' untuk pewarnaan yang benar
-    dikeluarkan_operator: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
-    diperiksa: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
-    selesai: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200',
-    ditolak: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
+    dikeluarkan_operator: 'bg-yellow-100 text-yellow-800',
+    diperiksa: 'bg-purple-100 text-purple-800',
+    selesai: 'bg-gray-100 text-gray-800',
+    ditolak: 'bg-red-100 text-red-800',
   }
   return colors[status] || 'bg-gray-100 text-gray-800'
 })

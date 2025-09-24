@@ -1,10 +1,8 @@
 <template>
   <div>
     <!-- Header -->
-    <header
-      class="p-4 flex items-center gap-4 bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-10"
-    >
-      <button @click="goBack" class="text-gray-700 dark:text-gray-200">
+    <header class="p-4 flex items-center gap-4 bg-white border-b border-gray-700 sticky top-0 z-10">
+      <button @click="goBack" class="text-gray-700">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -16,7 +14,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-      <h1 class="text-xl font-bold text-gray-900 dark:text-white">Buat Permintaan BBM</h1>
+      <h1 class="text-xl font-bold text-gray-900">Buat Permintaan BBM</h1>
     </header>
 
     <!-- Form -->
@@ -289,6 +287,6 @@ onMounted(() => {
 
 <style scoped>
 .form-input {
-  @apply mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
+  @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
 }
 </style>
