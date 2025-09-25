@@ -194,8 +194,8 @@ import { useAuthStore } from '../store/auth'
 
 const authStore = useAuthStore()
 const credentials = ref({
-  email: 'admin@admin.com',
-  password: 'password',
+  email: '',
+  password: '',
 })
 const loading = ref(false)
 const error = ref(null)
