@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 flex items-center justify-center p-6"
+    class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 flex items-center justify-center p-3"
   >
     <!-- Background Decorative Elements -->
     <div class="absolute inset-0 overflow-hidden">
@@ -17,7 +17,7 @@
 
     <!-- Login Card -->
     <div class="relative w-full max-w-md">
-      <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8">
+      <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-5">
         <!-- Header Section -->
         <div class="text-center mb-8">
           <div

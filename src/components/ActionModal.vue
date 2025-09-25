@@ -1,13 +1,11 @@
 <template>
   <div class="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-gray-800 w-full max-w-sm rounded-lg p-6 space-y-4">
-      <h2 class="text-xl font-bold text-gray-900 dark:text-white">{{ title }}</h2>
+    <div class="bg-white w-full max-w-sm rounded-lg p-6 space-y-4">
+      <h2 class="text-xl font-bold text-gray-900">{{ title }}</h2>
 
       <!-- Input tambahan -->
       <div v-if="actionType === 'approve'">
-        <label
-          for="volume_disetujui"
-          class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        <label for="volume_disetujui" class="block text-sm font-medium text-gray-700"
           >Volume Disetujui (Liter)</label
         >
         <input
@@ -20,9 +18,7 @@
         />
       </div>
       <div v-if="actionType === 'issue'">
-        <label
-          for="volume_dikeluarkan"
-          class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        <label for="volume_dikeluarkan" class="block text-sm font-medium text-gray-700"
           >Volume Dikeluarkan (Liter)</label
         >
         <input
@@ -35,9 +31,7 @@
         />
 
         <div class="mt-4">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-            >Foto Bukti</label
-          >
+          <label class="block text-sm font-medium text-gray-700">Foto Bukti</label>
           <input
             type="file"
             @change="handlePhotoSelect"
@@ -48,7 +42,7 @@
           <button
             @click="triggerPhotoInput"
             type="button"
-            class="mt-1 w-full p-2 border-2 border-dashed rounded-md flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400"
+            class="mt-1 w-full p-2 border-2 border-dashed rounded-md flex items-center justify-center gap-2 text-gray-500"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,9 +77,7 @@
 
       <!-- Tanda Tangan -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >Tanda Tangan Anda</label
-        >
+        <label class="block text-sm font-medium text-gray-700 mb-1">Tanda Tangan Anda</label>
         <SignaturePad ref="signaturePadRef" :error="!!signatureError" />
         <p v-if="signatureError" class="text-red-500 text-xs mt-1">{{ signatureError }}</p>
       </div>
@@ -95,7 +87,7 @@
         <button
           @click="$emit('close')"
           type="button"
-          class="w-full bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200 py-2 px-4 rounded-md font-semibold"
+          class="w-full bg-gray-300 text-gray-800 py-2 px-4 rounded-md font-semibold"
         >
           Batal
         </button>

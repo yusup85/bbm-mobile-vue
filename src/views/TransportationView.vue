@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pb-20">
     <!-- Header Section -->
-    <div class="bg-white shadow-sm p-6">
+    <div class="bg-white shadow-sm p-3">
       <div class="flex items-center space-x-4">
         <div
           class="w-12 h-12 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg"
@@ -65,7 +65,7 @@
       <div v-if="loading" class="space-y-4">
         <div v-for="n in 3" :key="n" class="bg-white rounded-2xl shadow-sm overflow-hidden">
           <div class="animate-pulse">
-            <div class="p-6">
+            <div class="p-3">
               <div class="flex items-center space-x-4">
                 <div
                   class="w-12 h-12 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full"
@@ -90,7 +90,7 @@
       </div>
 
       <!-- Error State -->
-      <div v-if="error" class="bg-white rounded-2xl shadow-sm p-8">
+      <div v-if="error" class="bg-white rounded-2xl shadow-sm p-3">
         <div class="text-center">
           <div
             class="w-16 h-16 bg-gradient-to-r from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -130,7 +130,7 @@
           class="block group"
         >
           <div
-            class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-lg hover:border-orange-200 transition-all duration-300 group-hover:scale-[1.02]"
+            class="bg-white rounded-2xl shadow-sm p-3 border border-gray-100 hover:shadow-lg hover:border-orange-200 transition-all duration-300 group-hover:scale-[1.02]"
           >
             <!-- Header Card -->
             <div class="flex justify-between items-start mb-4">
@@ -363,7 +363,7 @@
       <!-- Empty State for Filtered Tab -->
       <div
         v-else-if="!loading && filteredTransportations.length === 0 && transportations.length > 0"
-        class="bg-white rounded-2xl shadow-sm p-8"
+        class="bg-white rounded-2xl shadow-sm p-3"
       >
         <div class="text-center">
           <div
@@ -392,7 +392,7 @@
       <!-- Empty State - No Data at All -->
       <div
         v-else-if="!loading && transportations.length === 0"
-        class="bg-white rounded-2xl shadow-sm p-8"
+        class="bg-white rounded-2xl shadow-sm p-3"
       >
         <div class="text-center">
           <div

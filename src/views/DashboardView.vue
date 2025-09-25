@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     <!-- Header Section dengan Avatar -->
-    <div class="bg-white shadow-sm p-6">
+    <div class="bg-white shadow-sm p-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <div
@@ -63,7 +63,7 @@
           class="group transform hover:scale-105 transition-all duration-300"
         >
           <div
-            class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden"
+            class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-3 text-white shadow-xl relative overflow-hidden"
           >
             <!-- Decorative Background Circles -->
             <div
@@ -143,11 +143,11 @@
           class="group transform hover:scale-105 transition-all duration-300"
         >
           <div
-            class="bg-gradient-to-br from-orange-400 to-yellow-500 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden min-h-[160px]"
+            class="bg-gradient-to-br from-orange-400 to-yellow-500 rounded-2xl p-3 text-white shadow-xl relative overflow-hidden min-h-[160px]"
           >
             <!-- Decorative Background Circles -->
             <div
-              class="absolute -top-6 -right-6 w-20 h-20 bg-white bg-opacity-10 rounded-full"
+              class="absolute -top-3 -right-6 w-20 h-20 bg-white bg-opacity-10 rounded-full"
             ></div>
             <div
               class="absolute -bottom-4 -left-4 w-16 h-16 bg-white bg-opacity-10 rounded-full"
@@ -204,11 +204,11 @@
           class="group transform hover:scale-105 transition-all duration-300"
         >
           <div
-            class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden min-h-[160px]"
+            class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-3 text-white shadow-xl relative overflow-hidden min-h-[160px]"
           >
             <!-- Decorative Background Circles -->
             <div
-              class="absolute -top-6 -right-6 w-20 h-20 bg-white bg-opacity-10 rounded-full"
+              class="absolute -top-3 -right-6 w-20 h-20 bg-white bg-opacity-10 rounded-full"
             ></div>
             <div
               class="absolute -bottom-4 -left-4 w-16 h-16 bg-white bg-opacity-10 rounded-full"
@@ -283,7 +283,7 @@
       </div>
 
       <!-- Recent Activity -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
+      <div class="bg-white rounded-2xl p-3 shadow-sm">
         <div class="flex items-center justify-between mb-4">
           <h2 class="text-lg font-bold text-gray-900">Permintaan Terbaru</h2>
           <router-link to="/history" class="text-blue-600 text-sm font-medium"

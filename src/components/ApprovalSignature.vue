@@ -1,7 +1,7 @@
 <template>
   <div v-if="user || signature" class="text-center flex-1 min-w-[150px]">
-    <h3 class="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-2">{{ title }}</h3>
-    <div class="bg-gray-50 dark:bg-gray-700 p-2 rounded-lg space-y-2">
+    <h3 class="text-sm font-semibold text-gray-600 mb-2">{{ title }}</h3>
+    <div class="bg-gray-50 p-0 rounded-lg space-y-2">
       <img
         v-if="signature"
         :src="signature"
@@ -22,11 +22,11 @@
         />
       </div>
 
-      <div class="mt-2 border-t pt-2 dark:border-gray-600">
-        <p class="font-semibold text-gray-800 dark:text-gray-100 text-sm truncate">
+      <div class="mt-2 border-t pt-2">
+        <p class="font-semibold text-gray-800 text-sm truncate">
           {{ user?.name || 'N/A' }}
         </p>
-        <p class="text-xs text-gray-500 dark:text-gray-400">
+        <p class="text-xs text-gray-500">
           {{ user?.jabatan || 'Jabatan tidak ada' }}
         </p>
       </div>

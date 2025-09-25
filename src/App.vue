@@ -1,5 +1,7 @@
 <template>
-  <div class="max-w-md mx-auto h-screen flex flex-col font-sans bg-gray-100 dark:bg-gray-900">
+  <div
+    class="max-w-md mx-auto h-screen flex flex-col font-sans bg-gradient-to-br from-blue-50 to-indigo-100"
+  >
     <main class="flex-grow overflow-y-auto pb-16">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">

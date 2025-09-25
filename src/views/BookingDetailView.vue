@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     <!-- Header Section -->
-    <div class="bg-white shadow-sm p-6">
+    <div class="bg-white shadow-sm p-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <div
@@ -50,8 +50,8 @@
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
           <div class="animate-pulse">
             <div class="bg-gradient-to-r from-purple-200 to-pink-300 h-24"></div>
-            <div class="p-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-3">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div class="space-y-4">
                   <div
                     class="h-6 bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg w-3/4"
@@ -81,7 +81,7 @@
       </div>
 
       <!-- Error State -->
-      <div v-else-if="error" class="bg-white rounded-2xl shadow-sm p-8">
+      <div v-else-if="error" class="bg-white rounded-2xl shadow-sm p-5">
         <div class="text-center">
           <div
             class="w-16 h-16 bg-gradient-to-r from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -159,12 +159,12 @@
             </div>
           </div>
 
-          <div class="p-6 space-y-6">
+          <div class="p-3 space-y-6">
             <!-- Basic Information -->
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-3">
               <!-- Guest Information -->
               <div
-                class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100"
+                class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-3 border border-purple-100"
               >
                 <h3 class="font-bold text-gray-900 mb-4 flex items-center">
                   <div
@@ -206,7 +206,7 @@
 
               <!-- Room Information -->
               <div
-                class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100"
+                class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-3 border border-blue-100"
               >
                 <h3 class="font-bold text-gray-900 mb-4 flex items-center">
                   <div
@@ -253,11 +253,11 @@
             </div>
 
             <!-- Date and Guest Information -->
-            <div class="grid grid-cols-1 lg:grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-1 gap-3">
               <div>
                 <!-- Date Information -->
                 <div
-                  class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100"
+                  class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-3 border border-purple-100"
                 >
                   <h3 class="font-bold text-gray-900 mb-4 flex items-center">
                     <div
@@ -305,7 +305,7 @@
               <div v-if="booking.guest_names && booking.guest_names.length > 0">
                 <!-- Guest Names -->
                 <div
-                  class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-100"
+                  class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-3 border border-indigo-100"
                 >
                   <h3 class="font-bold text-gray-900 mb-4 flex items-center">
                     <div
@@ -350,7 +350,7 @@
             <!-- Extra Services -->
             <div
               v-if="booking.extra_services && booking.extra_services.length > 0"
-              class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100"
+              class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-3 border border-green-100"
             >
               <h3 class="font-bold text-gray-900 mb-4 flex items-center">
                 <div

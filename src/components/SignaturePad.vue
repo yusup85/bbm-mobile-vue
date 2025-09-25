@@ -1,14 +1,10 @@
 <template>
   <div class="w-full">
     <div class="border border-dashed rounded-lg p-2" :class="{ 'border-red-500': error }">
-      <canvas ref="canvas" class="w-full h-40 rounded-md bg-gray-50 dark:bg-gray-700"></canvas>
+      <canvas ref="canvas" class="w-full h-40 rounded-md bg-gray-50"></canvas>
     </div>
     <div class="flex justify-end mt-2">
-      <button
-        @click="clear"
-        type="button"
-        class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600"
-      >
+      <button @click="clear" type="button" class="text-sm text-gray-600 hover:text-indigo-600">
         Ulangi Tanda Tangan
       </button>
     </div>

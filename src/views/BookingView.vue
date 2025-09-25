@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     <!-- Header Section -->
-    <div class="bg-white shadow-sm p-6">
+    <div class="bg-white shadow-sm p-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <div
@@ -35,7 +35,7 @@
       <div v-if="loading" class="space-y-4">
         <div v-for="n in 3" :key="n" class="bg-white rounded-2xl shadow-sm overflow-hidden">
           <div class="animate-pulse">
-            <div class="p-6">
+            <div class="p-3">
               <div class="flex items-center justify-between mb-4">
                 <div class="w-20 h-6 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full"></div>
                 <div class="w-24 h-4 bg-gradient-to-r from-gray-200 to-gray-300 rounded"></div>
@@ -54,7 +54,7 @@
       </div>
 
       <!-- Error State -->
-      <div v-else-if="error" class="bg-white rounded-2xl shadow-sm p-8">
+      <div v-else-if="error" class="bg-white rounded-2xl shadow-sm p-5">
         <div class="text-center">
           <div
             class="w-16 h-16 bg-gradient-to-r from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -88,7 +88,7 @@
       <!-- Booking List -->
       <div v-else class="space-y-4">
         <!-- Empty State -->
-        <div v-if="bookings.length === 0" class="bg-white rounded-2xl shadow-sm p-8">
+        <div v-if="bookings.length === 0" class="bg-white rounded-2xl shadow-sm p-5">
           <div class="text-center">
             <div
               class="w-16 h-16 bg-gradient-to-r from-purple-100 to-pink-200 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -131,7 +131,7 @@
           <div
             v-for="booking in bookings"
             :key="booking.id"
-            class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-lg hover:border-purple-200 transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
+            class="bg-white rounded-2xl shadow-sm p-3 border border-gray-100 hover:shadow-lg hover:border-purple-200 transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
             @click="viewBookingDetail(booking.id)"
           >
             <!-- Header -->
@@ -304,7 +304,7 @@
         <!-- Pagination -->
         <div
           v-if="pagination && pagination.last_page > 1"
-          class="bg-white rounded-2xl shadow-sm p-6"
+          class="bg-white rounded-2xl shadow-sm p-3"
         >
           <div class="flex justify-center">
             <nav class="flex items-center space-x-2">

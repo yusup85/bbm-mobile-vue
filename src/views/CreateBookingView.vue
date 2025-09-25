@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     <!-- Header Section -->
-    <div class="bg-white shadow-sm p-6">
+    <div class="bg-white shadow-sm p-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <div
@@ -44,12 +44,12 @@
       </div>
     </div>
 
-    <div class="p-6">
+    <div class="p-3">
       <!-- Booking Form -->
       <div class="max-w-4xl mx-auto">
         <form
           @submit.prevent="submitBooking"
-          class="bg-white rounded-2xl shadow-lg p-8 space-y-8 border border-gray-100"
+          class="bg-white rounded-2xl shadow-lg p-5 space-y-8 border border-gray-100"
         >
           <div class="text-center pb-6 border-b border-gray-100">
             <div
@@ -75,7 +75,7 @@
           </div>
           <!-- Perusahaan -->
           <div
-            class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100"
+            class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-3 border border-purple-100"
           >
             <div class="flex items-center mb-4">
               <div
@@ -110,7 +110,7 @@
 
           <!-- Check-in & Check-out Dates -->
           <div
-            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100"
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-3 border border-blue-100"
           >
             <div class="flex items-center mb-4">
               <div
@@ -167,7 +167,7 @@
           <!-- Available Rooms -->
           <div
             v-if="availableRooms.length > 0"
-            class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100"
+            class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-3 border border-green-100"
           >
             <div class="flex items-center mb-4">
               <div
@@ -250,7 +250,7 @@
           <!-- Room loading state -->
           <div
             v-else-if="loadingRooms"
-            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100"
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-5 border border-blue-100"
           >
             <div class="text-center">
               <div
@@ -270,7 +270,7 @@
           <!-- No rooms available -->
           <div
             v-else-if="form.check_in_date && form.check_out_date"
-            class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100"
+            class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-5 border border-orange-100"
           >
             <div class="text-center">
               <div
@@ -300,7 +300,7 @@
 
           <!-- Number of Guests -->
           <div
-            class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-100"
+            class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-3 border border-indigo-100"
           >
             <div class="flex items-center mb-4">
               <div
@@ -337,7 +337,7 @@
           <!-- Guest Names -->
           <div
             v-if="form.number_of_guests > 0"
-            class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-100"
+            class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-3 border border-pink-100"
           >
             <div class="flex items-center mb-4">
               <div
@@ -383,7 +383,7 @@
           <!-- Extra Services -->
           <div
             v-if="extraServices.length > 0"
-            class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-100"
+            class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-3 border border-emerald-100"
           >
             <div class="flex items-center mb-4">
               <div
@@ -454,7 +454,7 @@
           <!-- Error Message -->
           <div
             v-if="error"
-            class="bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 text-red-700 rounded-2xl p-6"
+            class="bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 text-red-700 rounded-2xl p-3"
           >
             <div class="flex items-center">
               <div

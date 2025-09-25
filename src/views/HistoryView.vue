@@ -89,7 +89,7 @@
           </div>
         </div>
 
-        <div v-else-if="error" class="bg-white rounded-2xl shadow-sm p-8">
+        <div v-else-if="error" class="bg-white rounded-2xl shadow-sm p-5">
           <div class="text-center">
             <div
               class="w-16 h-16 bg-gradient-to-r from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -120,7 +120,7 @@
           </div>
         </div>
 
-        <div v-else-if="requests.length === 0" class="bg-white rounded-2xl shadow-sm p-8">
+        <div v-else-if="requests.length === 0" class="bg-white rounded-2xl shadow-sm p-5">
           <div class="text-center">
             <div
               class="w-16 h-16 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto mb-4"
