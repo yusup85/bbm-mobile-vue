@@ -695,7 +695,9 @@ export default {
       try {
         const bookingData = {
           ...this.form,
-          guest_names: this.form.guest_names.filter((name) => name.trim() !== ''),
+          guest_names: this.form.guest_names
+            .filter((name) => name.trim() !== '')
+            .map((name) => ({ name: name.trim() })),
         }
 
         const response = await bookingService.createBooking(bookingData)
